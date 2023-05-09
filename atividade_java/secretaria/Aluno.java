@@ -6,11 +6,11 @@ public class Aluno {
 	
 	private String nomeAluno;
 	private Date datadeNascimento;
-	private String endereço;
+	private String endereco;
 	private String email;
 	private String nomeResponsavel;
 	private int numeroTelefone;
-	private int cpf;
+	private String cpf;
 	private Matricula matricula;
 
 	public void setNome(String nome) {
@@ -48,6 +48,13 @@ public class Aluno {
 			numeroTelefone = numero;
 		} else {
 			System.out.print("numero invalido");
+		}
+	}
+	public void setNumeroCPF(String numeroCPF) {
+		if(cpf.toString().matches("[0-9]") && cpf.length() >= 0 && cpf.length() <= 11) {
+			cpf = numeroCPF;
+		} else {
+			System.out.print("cpf invalido");
 		}
 	}
 	

@@ -8,7 +8,7 @@ public class Professor {
 	private Date datadeNascimento;
 	private int cpf;
 	private Matricula matricula;
-	private String endereço;
+	private String endereco;
 	private String email;
 	private int numeroTelefone;
 	
