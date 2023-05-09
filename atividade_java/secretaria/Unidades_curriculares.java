@@ -3,17 +3,13 @@ package secretaria;
 public class Unidades_curriculares {
 
 	private Avaliacao avaliacao;
-	private int frequencia;
-	private boolean faltou = false; 
+	private int frequencia; 
 	private Professor professo;
 
 	public void setverificacaoFrequencia(int falta){
-		if (faltou == true) {
-			falta++;
-		}
-		frequencia = falta;
+		frequencia++;
 	}
-	public void getFrequencia() {
+	public int getFrequencia() {
 		return frequencia;
 	}
 }
