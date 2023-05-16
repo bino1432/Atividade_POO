@@ -5,11 +5,16 @@ public class Unidades_curriculares {
 	private Avaliacao avaliacao;
 	private int frequencia; 
 	private Professor professo;
+	private String nomeUnidadeCurricular;
 
-	public void setverificacaoFrequencia(int falta){
-		frequencia++;
+	/** classe para pegar o nome da Unidade Curricular */
+	public void setNomeUnidadeCurricular(String nomeUnidadeCurricular){
+		if(nomeUnidadeCurricular.length() >= 5 && nomeUnidadeCurricular.matches("[A-Za-z]*")){
+			this.nomeUnidadeCurricular = nomeUnidadeCurricular;
+		}
 	}
-	public int getFrequencia() {
-		return frequencia;
+	/** classe get para o nome da Unidade Curricular */
+	public String getNomeUnidadeCurricular(){
+		return nomeUnidadeCurricular;
 	}
 }

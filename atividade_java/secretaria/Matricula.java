@@ -2,28 +2,32 @@ package secretaria;
 
 public class Matricula {
 	
-	private String numeroMatricula;
+	private String codigo;
 	private String turma;
 	private Curso curso;
 	
-	public void setNomeTurma(String nome) {
+	/** classe para pegar o nome da turma */
+	public void setNomeTurma(String turma) {
 		if(turma.matches("[A-Za-z1-9]*")) {
-			turma = nome;
+			this.turma = turma;
 		} else {
 			System.out.print("Nome Invalido");
 		}
 	}
+	/** classe get para o nome da turma */
 	public String getNome() {
 		return turma;
 	}
-	public void setNumeroMatricula(String numero) {
-		if(numeroMatricula.matches("[1-9]*")) {
-			numeroMatricula = numero;
+	/** classe para pegar a matricula */
+	public void setCodigoMatricula(String codigo) {
+		if(codigo.matches("[1-9]*") && codigo.length() == 6 && codigo.matches("[A-Z]*")) {
+			this.codigo = codigo;
 		} else {
-			System.out.print("Nome Invalido");
+			System.out.print("codigo Invalido");
 		}
 	}
-	public String getNumeroMatricula() {
-		return numeroMatricula;
+	/** classe get do numero da matricula */
+	public String getCodigoMatricula() {
+		return codigo;
 	}
 }

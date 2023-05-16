@@ -6,24 +6,28 @@ public class Curso {
 	private int cargaHoraria;
 	private Unidades_curriculares unidades_curriculares; 
 	
-	public void setNomeCurso(String nome) {
-		if(nome.length() >= 3 && nome.matches("[A-Za-z]*")) {
-			nomeCurso = nome;
+	/** classe para pegar o nome do curso */
+	public void setNomeCurso(String nomeCurso) {
+		if(nomeCurso.length() >= 3 && nomeCurso.matches("[A-Za-z]*")) {
+			this.nomeCurso = nomeCurso;
 		} else {
 			System.out.print("Nome Invalido");
 		}
 	}
+	/** classe get no nome do curso */
 	public String getNome() {
 		return nomeCurso;
 	}
-	public void setCargaHoraria(int hora) {
+	/** classe para pegara carga horaria */
+	public void setCargaHoraria(int cargaHoraria) {
 		if(cargaHoraria > 0) {
-			cargaHoraria = hora;
+			this.cargaHoraria = cargaHoraria;
 		} else {
 			System.out.print("Nome Invalido");
 		}
 	}
-	public String getcargaHoraria() {
-		return nomeCurso;
+	/** classe set carga horaria */
+	public int getcargaHoraria() {
+		return cargaHoraria;
 	}
 }
