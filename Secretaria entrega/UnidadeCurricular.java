@@ -29,7 +29,7 @@ public class UnidadeCurricular {
         return this.curso;
     }
     /** construtor unidade curricular */
-    public UnidadeCurricular(String nome){
+    public UnidadeCurricular(String nome, Curso curso){
         setNome(nome);
         setCurso(curso);
     }

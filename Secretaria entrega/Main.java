@@ -8,11 +8,11 @@ public class Main {
         aluno.setNumeroTelefone("554512331231");
 
         Curso curso = new Curso("POG");
-        UnidadeCurricular unidadesCurriculares = new UnidadeCurricular("Matemática", Curso);
-        Matricula matricula = new Matricula(aluno, unidadesCurriculares);
-        Avaliacao avaliacao = new Avaliacao(aluno.getNome(), unidadesCurriculares);
-        Double nota_nota = 9.0;
-        Notas nota = new Notas(aluno, avaliacao, nota_nota);
+        UnidadeCurricular unidadeCurricular = new UnidadeCurricular("Matemática", curso);
+        Matricula matricula = new Matricula(aluno, unidadeCurricular);
+        Avaliacao avaliacao = new Avaliacao(aluno.getNome(), unidadeCurricular);
+        Double nota = 9.0;
+        Notas notas = new Notas(aluno, avaliacao, nota);
         // matricula.setCodigo("S00000");
 
 

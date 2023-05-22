@@ -2,10 +2,10 @@ public class Notas {
     
     private Aluno aluno;
     private Avaliacao avaliacao;
-    private float nota;
+    private Double nota;
 
     /** funcao que recebe a nota */
-    public void setNota(float nota){
+    public void setNota(Double nota){
         if(nota >= 0.0 && nota <= 10.0){
             this.nota = nota;
         } else {
@@ -13,7 +13,7 @@ public class Notas {
         }
     }
     /** funcao get na nota */
-    public float getNota(){
+    public Double getNota(){
         return nota;
     }
     /** funcao para receber o aluno */
@@ -43,7 +43,7 @@ public class Notas {
         return this.avaliacao;
     }
     /** construtor notas */
-    public Notas(Aluno aluno, Avaliacao avaliacao, float nota) {
+    public Notas(Aluno aluno, Avaliacao avaliacao, Double nota) {
         setAluno(aluno);
         setAvaliacao(avaliacao);
         setNota(nota);
