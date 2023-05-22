@@ -46,7 +46,7 @@ public class Aluno {
 	/** classe para pegar o numero de telefone */
 	public void setNumeroTelefone(String telefone) {
 		if(telefone.matches("[0-9]*") && telefone.length() >= 0 && telefone.length() <= 9) {
-			this.responsavel = telefone;
+			this.telefone = telefone;
 		} else {
 			System.out.print("numero invalido");
 		}
