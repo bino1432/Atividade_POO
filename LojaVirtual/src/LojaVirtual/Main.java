@@ -57,9 +57,13 @@ public class Main {
 			c.p.setTotal(Double.parseDouble("109.99"));
 			System.out.println("Total da Compra: " + c.p.getTotal());
 			
-			//verificação da classe Venda
+			// verificação da classe Venda
 			c.p.v.setEmpresa("Amazon");
 			System.out.print("Vendido por: " + c.p.v.getEmpresa());
+			
+			// verificação da classe Produto
+			c.p.v.pro.setAvaliacao(Double.parseDouble("5"));
+			System.out.println("Avaliação: " + c.p.v.pro.getAvaliacao());
 			
 		//JLabel lbLogin = new JLabel("Login: ");
 		//JLabel lbSenha = new JLabel("Senha: ");
