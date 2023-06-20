@@ -7,15 +7,19 @@ package LojaVirtual;
  */
 public class Cliente {
 
+	Endereco e = new Endereco();
+	Pagamento p = new Pagamento();
+	
 	private String nome;
 	private String cpf;
-	private String enderecos;
+	private Endereco enderecos;
 	private String email;
 	private String login;
 	private String senha;
+	private String dataNascimento;
 	private String telefone;
 	private String carteira;
-	private String formasdepagamento;
+	private Pagamento pagamento;
 	
 	/**
 	 * construtor da classe cliente
@@ -23,7 +27,22 @@ public class Cliente {
 	public Cliente() {
 		
 	}
-
+	/** metodo para receber a data de nascimento do cliente
+	 * 
+	 * @param dataNascimento (String)
+	 */
+	public void setDataNascimento(String dataNascimento) {
+		if(dataNascimento.matches("[0-9 /]*")) {
+			this.dataNascimento = dataNascimento;
+		}
+	}
+	/**
+	 * 
+	 * @return (String)
+	 */
+	public String getDataNascimento() {
+		return dataNascimento;
+	}
 	/** metodo para receber o nome do cliente 
 	 * 
 	 * @param nome (String)
@@ -31,8 +50,6 @@ public class Cliente {
 	public void setNome(String nome) {
 		if (nome.length() >= 3 && nome.matches("[A-Za-z]*")) {
 			this.nome = nome;
-		} else {
-			System.out.print("Nome Invalido");
 		}
 	}
 
@@ -49,10 +66,8 @@ public class Cliente {
 	 * @param email (String)
 	 * */
 	public void setEmail(String email) {
-		if (email.matches("[@]*") && email.matches("[A-Za-z]*")) {
+		if (email.matches("[A-Za-z @.]*")) {
 			this.email = email;
-		} else {
-			System.out.print("email invalido");
 		}
 	}
 
@@ -69,10 +84,8 @@ public class Cliente {
 	 * @param telefone (String)
 	 * */
 	public void setNumeroTelefone(String telefone) {
-		if (telefone.matches("[0-9]*") && telefone.length() >= 0 && telefone.length() <= 9) {
+		if (telefone.matches("[0-9]*") && telefone.length() >= 0) {
 			this.telefone = telefone;
-		} else {
-			System.out.print("numero invalido");
 		}
 	}
 
@@ -89,10 +102,8 @@ public class Cliente {
 	 * @param cpf (String)
 	 * */
 	public void setNumeroCPF(String cpf) {
-		if (cpf.toString().matches("[0-9]*") && cpf.length() >= 0 && cpf.length() <= 11) {
+		if (cpf.toString().matches("[0-9 -.]*") && cpf.length() >= 0) {
 			this.cpf = cpf;
-		} else {
-			System.out.print("cpf invalido");
 		}
 	}
 
@@ -108,19 +119,15 @@ public class Cliente {
 	 * 
 	 * @param enderecos (String)
 	 * */
-	public void setEndereco(String enderecos) {
-		if (enderecos.matches("[A-Za-z]*") && enderecos.length() > 5) {
-			this.enderecos = enderecos;
-		} else {
-			System.out.println("Endere�o Invalido!");
-		}
+	public void setEndereco(Endereco enderecos) {
+		this.enderecos = enderecos;
 	}
 
 	/** classe get endereco 
 	 * 
-	 * @return (String)
+	 * @return (Endereco)
 	 * */
-	public String getEndereco() {
+	public Endereco getEndereco() {
 		return enderecos;
 	}
 	/** metodo para receber a carteira do cliente
@@ -130,8 +137,6 @@ public class Cliente {
 	public void setCarteira(String carteira) {
 		if (carteira.matches("[Rr $ 0-9]*")){
 			this.carteira = carteira;
-		} else {
-			System.out.print("Valor Invalido!");
 		}
 	}
 	/** metodo para retornar a carteira do cliente
@@ -140,5 +145,19 @@ public class Cliente {
 	 */
 	public String getCarteira() {
 		return carteira;
+	}
+	/** metodo para receber o metodo de pagamento
+	 * 
+	 * @param pagamento (Pagamento)
+	 */
+	public void setPagamento(Pagamento pagamento) {
+		this.pagamento = pagamento;
+	}
+	/** metodo que retorna o metodo de pagamento
+	 * 
+	 * @return (Pagamento)
+	 */
+	public Pagamento getPagamento() {
+		return pagamento;
 	}
 }

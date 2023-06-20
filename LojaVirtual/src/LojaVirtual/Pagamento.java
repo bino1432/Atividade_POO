@@ -7,12 +7,14 @@ package LojaVirtual;
  */
 public class Pagamento {
 	
+	Venda v = new Venda();
+	
 	private String forma;
 	private int parcelamento;
-	private int desconto;
+	private Double desconto;
 	private double total;
 	private double frete;
-	private String venda;
+	private Venda venda;
 	
 	/**
 	 * metodo que retorna a forma de pagamento
@@ -53,18 +55,18 @@ public class Pagamento {
 	/**
 	 * metodo que retorna o desconto do produto
 	 * 
-	 * @return	(int)
+	 * @return	(Double)
 	 */
-	public int getDesconto() {
+	public Double getDesconto() {
 		return desconto;
 	}
 	/**
 	 * metodo que recebe o desconto do produto
 	 * 	
-	 * @param desconto (int)
+	 * @param desconto (Double)
 	 */
-	public void setDesconto(int desconto) {
-		if(desconto >=0){
+	public void setDesconto(Double desconto) {
+		if(desconto >= 0.0){
 			this.desconto = desconto;
 		}
 	}
@@ -107,17 +109,17 @@ public class Pagamento {
 	/**
 	 * metodo que retorna a venda 
 	 * 
-	 * @return (String)
+	 * @return (Venda)
 	 */
-	public String getVenda() {
+	public Venda getVenda() {
 		return venda;
 	}
 	/** 
 	 * metodo que recebe a venda
 	 * 
-	 * @param venda (String)
+	 * @param venda (Venda)
 	 */
-	public void setVenda(String venda) {
+	public void setVenda(Venda venda) {
 		this.venda = venda;
 	}
 }

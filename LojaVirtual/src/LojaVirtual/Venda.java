@@ -8,6 +8,8 @@ package LojaVirtual;
  */
 public class Venda {
 	
+	Produto pro = new Produto();
+	
 	private Cliente cliente;
 	private String empresa;
 	private Produto produto;

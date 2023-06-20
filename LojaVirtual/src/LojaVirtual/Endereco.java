@@ -48,7 +48,7 @@ public class Endereco {
 	 * @param rua (String)
 	 */
 	public void setRua(String rua) {
-		if(rua.length() > 3 && rua.matches("[A-Za-z9-0]*")) {
+		if(rua.length() > 3 && rua.matches("[A-Za-z 0-9 -]*")) {
 			this.rua = rua;
 		}
 	}
@@ -66,7 +66,7 @@ public class Endereco {
 	 * @param cep (String)
 	 */
 	public void setCep(String cep) {
-		if(cep.length() > 3 && cep.matches("[0-9 - ]*")) {
+		if(cep.length() > 3 && cep.matches("[0-9 -.]*")) {
 			this.cep = cep;
 		}
 	}
@@ -84,7 +84,7 @@ public class Endereco {
 	 * @param cidade (String)
 	 */
 	public void setCidade(String cidade) {
-		if(cidade.length() > 3 && cidade.matches("[A-Za-z]*")) {
+		if(cidade.length() > 3 && cidade.matches("[A-Za-z ]*")) {
 			this.cidade = cidade;
 		}
 	}
@@ -102,7 +102,7 @@ public class Endereco {
 	 * @param uf (String)
 	 */
 	public void setUf(String uf) {
-		if(uf.length() > 3 && uf.matches("[A-Za-z]*")) {
+		if(uf.length() > 3 && uf.matches("[A-Za-z ]*")) {
 			this.uf = uf;
 		}
 	}
@@ -120,7 +120,7 @@ public class Endereco {
 	 * @param numero (String)
 	 */
 	public void setNumero(String numero) {
-		if(numero.length() > 7 && numero.matches("[0-9]*")) {
+		if(numero.length() > 0 && numero.matches("[0-9 -.]*")) {
 			this.numero = numero;
 		}
 	}
@@ -138,7 +138,7 @@ public class Endereco {
 	 * @param complemento (String)
 	 */
 	public void setComplemento(String complemento) {
-		if(complemento.length() > 3) {
+		if(complemento.length() > 0) {
 			this.complemento = complemento;
 		}
 	}
