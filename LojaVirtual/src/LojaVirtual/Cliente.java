@@ -61,6 +61,42 @@ public class Cliente {
 		return nome;
 	}
 
+	/** metodo para receber o Login do cliente 
+	 * 
+	 * @param Login (String)
+	 * */
+	public void setLogin(String login) {
+		if (login.length() >= 3 && login.matches("[A-Za-z]*")) {
+			this.login = login;
+		}
+	}
+
+	/** metodo para retornar o login do cliente 
+	 * 
+	 * @return (String)
+	 * */
+	public String getLogin() {
+		return login;
+	}
+	
+	/** metodo para receber a Senha do cliente 
+	 * 
+	 * @param Senha (String)
+	 * */
+	public void setSenha(String senha) {
+		if (senha.length() >= 3 && senha.matches("[A-Za-z]*")) {
+			this.senha = senha;
+		}
+	}
+
+	/** metodo para retornar a Senha do cliente 
+	 * 
+	 * @return (String)
+	 * */
+	public String getsenha() {
+		return senha;
+	}
+	
 	/** metodo para receber o email do cliente 
 	 * 
 	 * @param email (String)
