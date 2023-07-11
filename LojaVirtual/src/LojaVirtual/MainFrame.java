@@ -59,7 +59,7 @@ public class MainFrame extends JFrame {
 			}
 		});
 		btnCadastro.setBounds(73, 96, 112, 23);
-		contentPane.add(btnCadastro);
+		contentPane.add(btnCadastro); 
 		
 		JButton btnLogin = new JButton("Logar");
 		btnLogin.addActionListener(new ActionListener() {

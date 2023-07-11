@@ -1,11 +1,14 @@
 package LojaVirtual;
 
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 
@@ -66,6 +69,12 @@ public class FrameLogin extends JFrame {
 		contentPane.add(lblNewLabel);
 		
 		JButton btnLogar = new JButton("Logar");
+		btnLogar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				JOptionPane.showMessageDialog(null, "Logado com Sucesso!");
+				
+		}});
 		btnLogar.setBounds(177, 138, 89, 23);
 		contentPane.add(btnLogar);
 	}

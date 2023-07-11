@@ -135,5 +135,9 @@ public class FrameCadastro extends JFrame {
 		});
 		btnCadastrar.setBounds(246, 190, 112, 23);
 		contentPane.add(btnCadastrar);
+		
+		JLabel lblBemVindo = new JLabel("Bem Vindo!");
+		lblBemVindo.setBounds(173, 18, 125, 14);
+		contentPane.add(lblBemVindo);
 	}
 }
