@@ -15,6 +15,9 @@ import javax.swing.JProgressBar;
 import java.awt.Font;
 import java.awt.Color;
 import javax.swing.JCheckBox;
+import javax.swing.JMenuBar;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
 
 public class FrameCadastro extends JFrame {
 
@@ -50,9 +53,36 @@ public class FrameCadastro extends JFrame {
 		setTitle("Cadastro");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 460, 300);
+		
+		JMenuBar menuBar = new JMenuBar();
+		setJMenuBar(menuBar);
+		
+		JMenu MnItemCadastroLog = new JMenu("Conta");
+		menuBar.add(MnItemCadastroLog);
+		
+		JMenuItem mntmNewMenuItem = new JMenuItem("Login");
+		MnItemCadastroLog.add(mntmNewMenuItem);
+		MnItemCadastroLog.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				FrameLogin frame = new FrameLogin();
+				frame.setVisible(true);
+			}
+		});
+		
+		JMenu mnNewMenu_1 = new JMenu("Produto");
+		menuBar.add(mnNewMenu_1);
+		
+		JMenuItem MnItemCadastroProd = new JMenuItem("Cadastrar Produto");
+		mnNewMenu_1.add(MnItemCadastroProd);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(196, 194, 189));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		MnItemCadastroProd.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				FrameProduto frame = new FrameProduto();
+				frame.setVisible(true);
+			}
+		});
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
