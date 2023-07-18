@@ -7,6 +7,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import java.awt.Font;
+import javax.swing.ImageIcon;
 
 public class FramePerfil extends JFrame {
 
@@ -60,10 +61,6 @@ public class FramePerfil extends JFrame {
 		lbPerfilNumero.setFont(new Font("Calibri", Font.PLAIN, 17));
 		lbPerfilNumero.setBounds(70, 170, 166, 17);
 		contentPane.add(lbPerfilNumero);
-		
-		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setBounds(250, 61, 46, 14);
-		contentPane.add(lblNewLabel);
 	}
 
 }
