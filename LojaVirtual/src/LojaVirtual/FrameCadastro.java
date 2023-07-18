@@ -98,6 +98,7 @@ public class FrameCadastro extends JFrame {
 		txNome.setColumns(10);
 		
 		txCPF = new JTextField();
+		txCPF.setText("000.000.000-00");
 		txCPF.setColumns(10);
 		txCPF.setBounds(70, 195, 100, 20);
 		contentPane.add(txCPF);
@@ -108,6 +109,7 @@ public class FrameCadastro extends JFrame {
 		contentPane.add(txEmail);
 		
 		txData = new JTextField();
+		txData.setText("dd/mm/aaaa");
 		txData.setColumns(10);
 		txData.setBounds(335, 55, 100, 20);
 		contentPane.add(txData);
