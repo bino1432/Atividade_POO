@@ -17,7 +17,7 @@ public class Main {
 		
 			Cliente c = new Cliente();
 			
-			// verificação da classe cliente
+			// verificaï¿½ï¿½o da classe cliente
 			c.setNome("Bernardo");
 			System.out.println("Nome: " + c.getNome());
 			c.setEmail("bernardo@gmail.com");
@@ -29,7 +29,7 @@ public class Main {
 			c.setDataNascimento("05/07/2006");
 			System.out.println("Data de Nascimento: " + c.getDataNascimento());
 			
-			// verificação da classe Endereço
+			// verificaï¿½ï¿½o da classe Endereï¿½o
 			c.e.setUf("Santa Catarina");
 			System.out.println("UF: " + c.e.getUf());
 			c.e.setCidade("Jaragua do Sul");
@@ -43,9 +43,9 @@ public class Main {
 			c.e.setComplemento("Atras do posto");
 			System.out.println("Complemento: " + c.e.getComplemento());
 			c.e.setIdentificacao("Bernardao");
-			System.out.println("Identificação: " + c.e.getIdentificacao());
+			System.out.println("Identificaï¿½ï¿½o: " + c.e.getIdentificacao());
 			
-			// verificação da classe Pagamento
+			// verificaï¿½ï¿½o da classe Pagamento
 			c.p.setDesconto(Double.parseDouble("0.15"));
 			System.out.println("Desconto: " + c.p.getDesconto());
 			c.p.setForma("pix");
@@ -57,13 +57,13 @@ public class Main {
 			c.p.setTotal(Double.parseDouble("109.99"));
 			System.out.println("Total da Compra: " + c.p.getTotal());
 			
-			// verificação da classe Venda
+			// verificaï¿½ï¿½o da classe Venda
 			c.p.v.setEmpresa("Amazon");
-			System.out.print("Vendido por: " + c.p.v.getEmpresa());
+			System.out.println("Vendido por: " + c.p.v.getEmpresa());
 			
-			// verificação da classe Produto
+			// verificaï¿½ï¿½o da classe Produto
 			c.p.v.pro.setAvaliacao(Double.parseDouble("5"));
-			System.out.println("Avaliação: " + c.p.v.pro.getAvaliacao());
+			System.out.println("Avaliaï¿½ï¿½o: " + c.p.v.pro.getAvaliacao());
 			
 		//JLabel lbLogin = new JLabel("Login: ");
 		//JLabel lbSenha = new JLabel("Senha: ");
