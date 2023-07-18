@@ -14,6 +14,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.JProgressBar;
 import java.awt.Font;
 import java.awt.Color;
+import javax.swing.JCheckBox;
 
 public class FrameCadastro extends JFrame {
 
@@ -48,7 +49,7 @@ public class FrameCadastro extends JFrame {
 	public FrameCadastro() {
 		setTitle("Cadastro");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 460, 300);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(196, 194, 189));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -145,12 +146,22 @@ public class FrameCadastro extends JFrame {
 				JOptionPane.showMessageDialog(null, "Cadastrado com Sucesso!");
 			}
 		});
-		btnCadastrar.setBounds(250, 160, 112, 23);
+		btnCadastrar.setBounds(250, 195, 112, 23);
 		contentPane.add(btnCadastrar);
 		
 		JLabel lblBemVindo = new JLabel("Bem Vindo!");
 		lblBemVindo.setFont(new Font("Calibri", Font.PLAIN, 17));
 		lblBemVindo.setBounds(70, 20, 125, 17);
 		contentPane.add(lblBemVindo);
+		
+		JLabel lblConcordaComNossos = new JLabel("Concorda com \r\nnossos Termos:");
+		lblConcordaComNossos.setFont(new Font("Calibri", Font.PLAIN, 17));
+		lblConcordaComNossos.setBounds(180, 125, 215, 16);
+		contentPane.add(lblConcordaComNossos);
+		
+		JCheckBox chckbxTermos = new JCheckBox("Sim");
+		chckbxTermos.setBackground(new Color(196, 194, 189));
+		chckbxTermos.setBounds(180, 145, 60, 23);
+		contentPane.add(chckbxTermos);
 	}
 }

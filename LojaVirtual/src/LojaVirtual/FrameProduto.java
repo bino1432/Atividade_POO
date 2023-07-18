@@ -21,6 +21,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.JCheckBox;
+import java.awt.Font;
 
 public class FrameProduto extends JFrame {
 	// Conjunto de Componentes
@@ -56,75 +57,88 @@ public class FrameProduto extends JFrame {
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
 		
-		JMenu mnProdutos = new JMenu("Produtos");
-		menuBar.add(mnProdutos);
+		JMenu MnProduto = new JMenu("Conta");
+		menuBar.add(MnProduto);
 		
-		JMenuItem mnItemCadastrar = new JMenuItem("Cadastrar");
-		mnProdutos.add(mnItemCadastrar);
+		JMenuItem MnItemLogar = new JMenuItem("Logar");
+		MnProduto.add(MnItemLogar);
+		MnItemLogar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				FrameLogin frame = new FrameLogin();
+				frame.setVisible(true);
+			}
+		});
+		
+		JMenuItem MnItemCadastrar = new JMenuItem("Cadastrar");
+		MnProduto.add(MnItemCadastrar);
 		contentPane = new JPanel();
-		contentPane.setBackground(new Color(240, 240, 240));
+		contentPane.setBackground(new Color(196, 194, 189));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		MnItemCadastrar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				FrameCadastro frame = new FrameCadastro();
+				frame.setVisible(true);
+			}
+		});
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		JLabel lbNomeProduto = new JLabel("Nome:");
-		lbNomeProduto.setBounds(104, 14, 46, 14);
+		lbNomeProduto.setFont(new Font("Calibri", Font.PLAIN, 17));
+		lbNomeProduto.setBounds(110, 20, 57, 17);
 		contentPane.add(lbNomeProduto);
 		
 		txNome = new JTextField();
-		txNome.setBounds(160, 11, 152, 20);
+		txNome.setBounds(195, 20, 152, 20);
 		contentPane.add(txNome);
 		txNome.setColumns(10);
 		
 
 		
 		JLabel lbPreco = new JLabel("Preço: ");
-		lbPreco.setBounds(104, 42, 46, 14);
+		lbPreco.setFont(new Font("Calibri", Font.PLAIN, 17));
+		lbPreco.setBounds(110, 50, 57, 17);
 		contentPane.add(lbPreco);
 		
 		txPreco = new JTextField();
-		txPreco.setBounds(159, 39, 152, 20);
+		txPreco.setBounds(195, 50, 152, 20);
 		contentPane.add(txPreco);
 		txPreco.setColumns(10);
 		
 		txCor = new JTextField();
-		txCor.setBounds(159, 70, 152, 20);
+		txCor.setBounds(195, 80, 152, 20);
 		contentPane.add(txCor);
 		txCor.setColumns(10);
 		
 		JLabel lbCor = new JLabel("Cor: ");
-		lbCor.setBounds(103, 73, 46, 14);
+		lbCor.setFont(new Font("Calibri", Font.PLAIN, 17));
+		lbCor.setBounds(110, 80, 46, 17);
 		contentPane.add(lbCor);
 		
 		JComboBox CBCategoria = new JComboBox();
 		CBCategoria.setModel(new DefaultComboBoxModel(new String[] {"Esporte", "Moda", "Domesticos", "Jogos"}));
-		CBCategoria.setBounds(159, 101, 152, 22);
+		CBCategoria.setBounds(195, 110, 152, 22);
 		contentPane.add(CBCategoria);
 		
 		JLabel lbCategoria = new JLabel("Categoria:");
-		lbCategoria.setBounds(92, 105, 57, 14);
+		lbCategoria.setFont(new Font("Calibri", Font.PLAIN, 17));
+		lbCategoria.setBounds(110, 110, 89, 17);
 		contentPane.add(lbCategoria);
 		
 		JTextArea txDescricao = new JTextArea();
-		txDescricao.setBackground(new Color(200, 200, 196));
-		txDescricao.setBounds(159, 134, 152, 43);
+		txDescricao.setBackground(new Color(215, 211, 208));
+		txDescricao.setBounds(195, 140, 152, 43);
 		contentPane.add(txDescricao);
 		
 		JLabel lbDescricao = new JLabel("Descrição: ");
-		lbDescricao.setBounds(81, 149, 64, 14);
+		lbDescricao.setFont(new Font("Calibri", Font.PLAIN, 17));
+		lbDescricao.setBounds(110, 140, 80, 17);
 		contentPane.add(lbDescricao);
-		
-		JCheckBox chckbxTermos = new JCheckBox("Sim");
-		chckbxTermos.setBounds(262, 183, 97, 23);
-		contentPane.add(chckbxTermos);
-		
-		JLabel lbTermos = new JLabel("Concorda com nossos Termos:");
-		lbTermos.setBounds(41, 187, 186, 14);
-		contentPane.add(lbTermos);
 		
 		// Cria o botâo
 		JButton btnSalvar = new JButton("Salvar");
+		btnSalvar.setBackground(new Color(215, 211, 208));
 		// Cria um AcionEventListener
 		btnSalvar.addActionListener(new ActionListener() {
 				// Método actionPerfomed
@@ -143,7 +157,7 @@ public class FrameProduto extends JFrame {
 				JOptionPane.showMessageDialog(null, "Produto " + "cadastro: " + nome);
 			}
 		});
-		btnSalvar.setBounds(164, 212, 89, 23);
+		btnSalvar.setBounds(170, 210, 89, 23);
 		
 		contentPane.add(btnSalvar);
 		

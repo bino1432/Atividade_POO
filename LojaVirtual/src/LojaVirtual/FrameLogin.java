@@ -11,6 +11,8 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import java.awt.Font;
+import java.awt.Color;
 
 public class FrameLogin extends JFrame {
 
@@ -41,41 +43,46 @@ public class FrameLogin extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 223);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(196, 194, 189));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		JLabel lblUsuario = new JLabel("Usuario:");
-		lblUsuario.setBounds(69, 83, 55, 14);
+		lblUsuario.setFont(new Font("Calibri", Font.PLAIN, 17));
+		lblUsuario.setBounds(160, 60, 79, 14);
 		contentPane.add(lblUsuario);
 		
 		JLabel lblSenha = new JLabel("Senha:");
-		lblSenha.setBounds(238, 83, 46, 14);
+		lblSenha.setFont(new Font("Calibri", Font.PLAIN, 17));
+		lblSenha.setBounds(160, 90, 78, 17);
 		contentPane.add(lblSenha);
 		
 		txUsuario = new JTextField();
-		txUsuario.setBounds(124, 80, 86, 20);
+		txUsuario.setBounds(230, 60, 86, 20);
 		contentPane.add(txUsuario);
 		txUsuario.setColumns(10);
 		
 		txSenha = new JTextField();
-		txSenha.setBounds(283, 80, 86, 20);
+		txSenha.setBounds(230, 90, 86, 20);
 		contentPane.add(txSenha);
 		txSenha.setColumns(10);
 		
 		JLabel lblNewLabel = new JLabel("Bem Vindo de Volta!");
-		lblNewLabel.setBounds(166, 29, 145, 14);
+		lblNewLabel.setFont(new Font("Calibri", Font.PLAIN, 17));
+		lblNewLabel.setBounds(170, 20, 145, 17);
 		contentPane.add(lblNewLabel);
 		
 		JButton btnLogar = new JButton("Logar");
+		btnLogar.setBackground(new Color(215, 211, 208));
 		btnLogar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
 				JOptionPane.showMessageDialog(null, "Logado com Sucesso!");
 				
 		}});
-		btnLogar.setBounds(177, 138, 89, 23);
+		btnLogar.setBounds(200, 140, 89, 23);
 		contentPane.add(btnLogar);
 	}
 
