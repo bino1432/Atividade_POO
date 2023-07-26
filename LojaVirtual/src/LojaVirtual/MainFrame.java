@@ -55,7 +55,7 @@ public class MainFrame extends JFrame {
 		lbBemVindo.setBounds(180, 40, 140, 26);
 		contentPane.add(lbBemVindo);
 		
-		JLabel lbVoceDeseja = new JLabel("Você deseja:");
+		JLabel lbVoceDeseja = new JLabel("Voce deseja:");
 		lbVoceDeseja.setFont(new Font("Calibri", Font.PLAIN, 17));
 		lbVoceDeseja.setBounds(180, 70, 130, 20);
 		contentPane.add(lbVoceDeseja);
