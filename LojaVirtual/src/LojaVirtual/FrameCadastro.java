@@ -119,7 +119,7 @@ public class FrameCadastro extends JFrame {
 		
 		JLabel lblNumeroTelefone = new JLabel("Numero Telefone:");
 		lblNumeroTelefone.setFont(new Font("Calibri", Font.PLAIN, 17));
-		lblNumeroTelefone.setBounds(180, 90, 127, 20);
+		lblNumeroTelefone.setBounds(180, 90, 158, 20);
 		contentPane.add(lblNumeroTelefone);
 		
 		txNome = new JTextField();
@@ -188,7 +188,7 @@ public class FrameCadastro extends JFrame {
 		
 		JLabel lblConcordaComNossos = new JLabel("Concorda com \r\nnossos Termos:");
 		lblConcordaComNossos.setFont(new Font("Calibri", Font.PLAIN, 17));
-		lblConcordaComNossos.setBounds(180, 125, 215, 16);
+		lblConcordaComNossos.setBounds(180, 125, 255, 16);
 		contentPane.add(lblConcordaComNossos);
 		
 		JCheckBox chckbxTermos = new JCheckBox("Sim");

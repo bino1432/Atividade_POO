@@ -61,7 +61,7 @@ public class MainFrame extends JFrame {
 		contentPane.add(lbVoceDeseja);
 		
 		JButton btnCadastro = new JButton("Cadastrar");
-		btnCadastro.setBackground(new Color(215, 211, 208));
+		btnCadastro.setBackground(new Color(240, 240, 240));
 		btnCadastro.setFont(new Font("Calibri", Font.PLAIN, 13));
 		btnCadastro.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
