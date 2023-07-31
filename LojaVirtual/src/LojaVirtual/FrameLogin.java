@@ -101,7 +101,7 @@ public class FrameLogin extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("Bem Vindo de Volta!");
 		lblNewLabel.setFont(new Font("Calibri", Font.PLAIN, 17));
-		lblNewLabel.setBounds(140, 20, 145, 17);
+		lblNewLabel.setBounds(140, 20, 173, 17);
 		contentPane.add(lblNewLabel);
 		
 		JButton btnLogar = new JButton("Logar");

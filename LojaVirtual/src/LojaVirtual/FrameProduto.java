@@ -71,9 +71,19 @@ public class FrameProduto extends JFrame {
 		
 		JMenuItem MnItemCadastrar = new JMenuItem("Cadastrar");
 		MnProduto.add(MnItemCadastrar);
+		
+		JMenuItem menuProdutoPerfil = new JMenuItem("Perfil");
+		MnProduto.add(menuProdutoPerfil);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(196, 194, 189));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		menuProdutoPerfil.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				FramePerfil frame = new FramePerfil();
+				frame.setVisible(true);
+			}
+		});
+		
 		MnItemCadastrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				FrameCadastro frame = new FrameCadastro();
@@ -96,7 +106,7 @@ public class FrameProduto extends JFrame {
 		
 
 		
-		JLabel lbPreco = new JLabel("Preço: ");
+		JLabel lbPreco = new JLabel("Preco:");
 		lbPreco.setFont(new Font("Calibri", Font.PLAIN, 17));
 		lbPreco.setBounds(110, 50, 57, 17);
 		contentPane.add(lbPreco);
@@ -131,7 +141,7 @@ public class FrameProduto extends JFrame {
 		txDescricao.setBounds(195, 140, 152, 43);
 		contentPane.add(txDescricao);
 		
-		JLabel lbDescricao = new JLabel("Descrição: ");
+		JLabel lbDescricao = new JLabel("Descricao:");
 		lbDescricao.setFont(new Font("Calibri", Font.PLAIN, 17));
 		lbDescricao.setBounds(110, 140, 80, 17);
 		contentPane.add(lbDescricao);
