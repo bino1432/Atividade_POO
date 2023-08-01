@@ -176,6 +176,8 @@ public class FrameCadastro extends JFrame {
 				c.setNumeroCPF(txCPF.getText());
 				
 				JOptionPane.showMessageDialog(null, "Cadastrado com Sucesso!");
+				FramePadrao frame = new FramePadrao();
+				frame.setVisible(true);
 			}
 		});
 		btnCadastrar.setBounds(250, 195, 112, 23);

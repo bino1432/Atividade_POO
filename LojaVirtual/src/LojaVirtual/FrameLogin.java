@@ -110,6 +110,8 @@ public class FrameLogin extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				
 				JOptionPane.showMessageDialog(null, "Logado com Sucesso!");
+				FramePadrao frame = new FramePadrao();
+				frame.setVisible(true);
 				
 		}});
 		btnLogar.setBounds(170, 140, 89, 23);
