@@ -9,10 +9,14 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
 import java.awt.Color;
+import javax.swing.JTabbedPane;
+import javax.swing.JTable;
 
 public class FramePadrao extends JFrame {
 
 	private JPanel contentPane;
+	private JTable table;
+	private JTable table_1;
 
 	/**
 	 * Launch the application.
@@ -50,6 +54,7 @@ public class FramePadrao extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				FramePerfil frame = new FramePerfil();
 				frame.setVisible(true);
+				dispose();
 			}
 		});
 		
@@ -61,6 +66,7 @@ public class FramePadrao extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				FrameCarrinho frame = new FrameCarrinho();
 				frame.setVisible(true);
+				dispose();
 			}
 	});
 		
@@ -78,12 +84,19 @@ public class FramePadrao extends JFrame {
 		JButton btnAddProduto = new JButton("Adicionar Produto");
 		btnAddProduto.setBounds(10, 11, 163, 23);
 		contentPane.add(btnAddProduto);
+		
+		table_1 = new JTable();
+		table_1.setBounds(10, 49, 317, 190);
+		contentPane.add(table_1);
+
 		btnAddProduto.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				FrameProduto frame = new FrameProduto();
 				frame.setVisible(true);
+				dispose();
 			}
 		});
+		
 		
 	}
 }

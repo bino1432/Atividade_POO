@@ -18,6 +18,7 @@ import javax.swing.JCheckBox;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
+import javax.swing.JFormattedTextField;
 
 public class FrameCadastro extends JFrame {
 
@@ -149,7 +150,7 @@ public class FrameCadastro extends JFrame {
 				c.setNumeroCPF(txCPF.getText());
 				
 				JOptionPane.showMessageDialog(null, "Cadastrado com Sucesso!");
-				FramePadrao frame = new FramePadrao();
+				MainFrame frame = new MainFrame();
 				frame.setVisible(true);
 				dispose();
 			}
