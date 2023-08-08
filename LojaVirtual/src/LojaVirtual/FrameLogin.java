@@ -43,6 +43,7 @@ public class FrameLogin extends JFrame {
 	 * Create the frame.
 	 */
 	public FrameLogin() {
+		setTitle("Login");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 235);
 		contentPane = new JPanel();

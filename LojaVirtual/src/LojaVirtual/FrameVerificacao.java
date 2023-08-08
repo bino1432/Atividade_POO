@@ -37,6 +37,7 @@ public class FrameVerificacao extends JFrame {
 	 * Create the frame.
 	 */
 	public FrameVerificacao() {
+		setTitle("Deseja sair?");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 180);
 		contentPane = new JPanel();
