@@ -53,43 +53,9 @@ public class FrameProduto extends JFrame {
 		setTitle("Cadastro Produto");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
-		
-		JMenuBar menuBar = new JMenuBar();
-		setJMenuBar(menuBar);
-		
-		JMenu MnProduto = new JMenu("Conta");
-		menuBar.add(MnProduto);
-		
-		JMenuItem MnItemLogar = new JMenuItem("Logar");
-		MnProduto.add(MnItemLogar);
-		MnItemLogar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				FrameLogin frame = new FrameLogin();
-				frame.setVisible(true);
-			}
-		});
-		
-		JMenuItem MnItemCadastrar = new JMenuItem("Cadastrar");
-		MnProduto.add(MnItemCadastrar);
-		
-		JMenuItem menuProdutoPerfil = new JMenuItem("Perfil");
-		MnProduto.add(menuProdutoPerfil);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(196, 194, 189));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		menuProdutoPerfil.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				FramePerfil frame = new FramePerfil();
-				frame.setVisible(true);
-			}
-		});
-		
-		MnItemCadastrar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				FrameCadastro frame = new FrameCadastro();
-				frame.setVisible(true);
-			}
-		});
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -156,20 +122,34 @@ public class FrameProduto extends JFrame {
 				// Ações: 
 				String nome = txNome.getText();
 				// Associação entre classe Produto -> TelaProdutos
-				 Produto p = new Produto();
-				 p.setNome(txNome.getText());
-				 p.setPreco(Double.parseDouble(txPreco.getText()));
-				 p.setCor(txCor.getText());
-				 p.setCategoria(CBCategoria.getSelectedItem().toString());
-				 p.setDescricao(txDescricao.getText());
+				Produto p = new Produto();
+				p.setNome(txNome.getText());
+				p.setPreco(Double.parseDouble(txPreco.getText()));
+				p.setCor(txCor.getText());
+				p.setCategoria(CBCategoria.getSelectedItem().toString());
+				p.setDescricao(txDescricao.getText());
 				 
-				 
+				dispose();
 				JOptionPane.showMessageDialog(null, "Produto " + "cadastro: " + nome);
+				FramePadrao frame = new FramePadrao();
+				frame.setVisible(true);
+				
 			}
 		});
-		btnSalvar.setBounds(170, 210, 89, 23);
+		btnSalvar.setBounds(174, 212, 89, 23);
 		
 		contentPane.add(btnSalvar);
 		
+		JButton btnVoltar = new JButton("Voltar");
+		btnVoltar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				FramePadrao frame = new FramePadrao();
+				frame.setVisible(true);
+				dispose();
+			}
+		});
+		btnVoltar.setBackground(new Color(215, 211, 208));
+		btnVoltar.setBounds(10, 16, 89, 23);
+		contentPane.add(btnVoltar);
 	}
 }

@@ -45,36 +45,9 @@ public class FrameLogin extends JFrame {
 	public FrameLogin() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 235);
-		
-		JMenuBar menuBar = new JMenuBar();
-		setJMenuBar(menuBar);
-		
-		JMenu mnNewMenu = new JMenu("Conta");
-		menuBar.add(mnNewMenu);
-		
-		JMenuItem MnItemLoginCad = new JMenuItem("Cadastrar");
-		mnNewMenu.add(MnItemLoginCad);
-		MnItemLoginCad.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				FrameCadastro frame = new FrameCadastro();
-				frame.setVisible(true);
-			}
-		});
-		
-		JMenu mnNewMenu_1 = new JMenu("Produto");
-		menuBar.add(mnNewMenu_1);
-		
-		JMenuItem MnItemLoginProd = new JMenuItem("Cadastrar um Produto");
-		mnNewMenu_1.add(MnItemLoginProd);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(196, 194, 189));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		MnItemLoginProd.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				FrameProduto frame = new FrameProduto();
-				frame.setVisible(true);
-			}
-		});
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -112,10 +85,24 @@ public class FrameLogin extends JFrame {
 				JOptionPane.showMessageDialog(null, "Logado com Sucesso!");
 				FramePadrao frame = new FramePadrao();
 				frame.setVisible(true);
+				dispose();
 				
 		}});
-		btnLogar.setBounds(170, 140, 89, 23);
+		btnLogar.setBounds(120, 138, 89, 23);
 		contentPane.add(btnLogar);
+		
+		JButton btnVoltar = new JButton("Voltar");
+		btnVoltar.setBackground(new Color(215, 211, 208));
+		btnVoltar.setBounds(224, 138, 89, 23);
+		contentPane.add(btnVoltar);
+		btnVoltar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MainFrame frame = new MainFrame();
+				frame.setVisible(true);
+				dispose();
+			}
+		});
+		
 	}
 
 }

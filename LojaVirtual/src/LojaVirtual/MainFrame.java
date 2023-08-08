@@ -67,6 +67,7 @@ public class MainFrame extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				FrameCadastro frame = new FrameCadastro();
 				frame.setVisible(true);
+				dispose();
 			}
 		});
 		btnCadastro.setBounds(170, 100, 112, 23);
@@ -78,28 +79,10 @@ public class MainFrame extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				FrameLogin frame = new FrameLogin();
 				frame.setVisible(true);
+				dispose();
 			}
 		});
 		btnLogin.setBounds(170, 140, 112, 23);
 		contentPane.add(btnLogin);
-		
-		JMenuBar menuBar = new JMenuBar();
-		menuBar.setBackground(new Color(215, 211, 208));
-		menuBar.setBounds(0, 0, 434, 22);
-		contentPane.add(menuBar);
-		
-		JMenu MnMain = new JMenu("Produto");
-		MnMain.setFont(new Font("Calibri", Font.PLAIN, 13));
-		menuBar.add(MnMain);
-		
-		JMenuItem MnItemMain = new JMenuItem("Cadastrar um Produto");
-		MnItemMain.setFont(new Font("Calibri", Font.PLAIN, 13));
-		MnMain.add(MnItemMain);
-		MnItemMain.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				FrameProduto frame = new FrameProduto();
-				frame.setVisible(true);
-			}
-		});
 	}
 }

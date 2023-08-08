@@ -52,8 +52,38 @@ public class FramePadrao extends JFrame {
 				frame.setVisible(true);
 			}
 		});
-
+		
+		JButton btnPadraoCarrinho = new JButton("Carrinho");
+		btnPadraoCarrinho.setBounds(238, 11, 89, 23);
+		contentPane.add(btnPadraoCarrinho);
+		
+		btnPadraoCarrinho.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				FrameCarrinho frame = new FrameCarrinho();
+				frame.setVisible(true);
+			}
+	});
+		
+		JButton btnPadraoLogout = new JButton("Logout");
+		btnPadraoLogout.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				FrameVerificacao frame = new FrameVerificacao();
+				frame.setVisible(true);
+				dispose();
+			}
+		});
+		btnPadraoLogout.setBounds(337, 45, 89, 23);
+		contentPane.add(btnPadraoLogout);
+		
+		JButton btnAddProduto = new JButton("Adicionar Produto");
+		btnAddProduto.setBounds(10, 11, 163, 23);
+		contentPane.add(btnAddProduto);
+		btnAddProduto.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				FrameProduto frame = new FrameProduto();
+				frame.setVisible(true);
+			}
+		});
 		
 	}
-
 }

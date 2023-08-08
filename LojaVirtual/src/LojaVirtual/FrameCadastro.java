@@ -53,36 +53,9 @@ public class FrameCadastro extends JFrame {
 		setTitle("Cadastro");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 460, 300);
-		
-		JMenuBar menuBar = new JMenuBar();
-		setJMenuBar(menuBar);
-		
-		JMenu MnItemCadastroLog = new JMenu("Conta");
-		menuBar.add(MnItemCadastroLog);
-		
-		JMenuItem mntmNewMenuItem = new JMenuItem("Login");
-		MnItemCadastroLog.add(mntmNewMenuItem);
-		MnItemCadastroLog.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				FrameLogin frame = new FrameLogin();
-				frame.setVisible(true);
-			}
-		});
-		
-		JMenu mnNewMenu_1 = new JMenu("Produto");
-		menuBar.add(mnNewMenu_1);
-		
-		JMenuItem MnItemCadastroProd = new JMenuItem("Cadastrar Produto");
-		mnNewMenu_1.add(MnItemCadastroProd);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(196, 194, 189));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		MnItemCadastroProd.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				FrameProduto frame = new FrameProduto();
-				frame.setVisible(true);
-			}
-		});
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -178,9 +151,10 @@ public class FrameCadastro extends JFrame {
 				JOptionPane.showMessageDialog(null, "Cadastrado com Sucesso!");
 				FramePadrao frame = new FramePadrao();
 				frame.setVisible(true);
+				dispose();
 			}
 		});
-		btnCadastrar.setBounds(250, 195, 112, 23);
+		btnCadastrar.setBounds(180, 196, 112, 23);
 		contentPane.add(btnCadastrar);
 		
 		JLabel lblBemVindo = new JLabel("Bem Vindo!");
@@ -197,5 +171,19 @@ public class FrameCadastro extends JFrame {
 		chckbxTermos.setBackground(new Color(196, 194, 189));
 		chckbxTermos.setBounds(180, 145, 60, 23);
 		contentPane.add(chckbxTermos);
+		
+		JButton btnCancelar = new JButton("Cancelar");
+		btnCancelar.setFont(new Font("Calibri", Font.PLAIN, 13));
+		btnCancelar.setBackground(new Color(215, 211, 208));
+		btnCancelar.setBounds(312, 196, 112, 23);
+		contentPane.add(btnCancelar);
+		btnCancelar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MainFrame frame = new MainFrame();
+				frame.setVisible(true);
+				dispose();
+			}
+		});
+		
 	}
 }
