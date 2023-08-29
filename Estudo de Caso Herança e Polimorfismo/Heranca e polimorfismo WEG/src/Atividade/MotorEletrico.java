@@ -44,6 +44,31 @@ public class MotorEletrico extends ProdutoWEG {
 	public void setEficiencia(float eficiencia) {
 		this.eficiencia = eficiencia;
 	}
+	
+	/**metodo que retorna uma mensagem
+	 * 
+	 * @return retorna uma mensagem que o aparelho está ligando
+	 */
+	public String Ligar() {
+		return "Aparelho Ligando";		
+	}
+	
+	/**metodo que retorna uma mensagem
+	 * 
+	 * @return retorna uma mensagem que o aparelho está Desligando
+	 */
+	public String Desligar() {
+		return "Aparelho Desligando";
+	}
+	
+	/**metodo que rotorna uma mensagem
+	 * 
+	 * @return retorna uma mensagem que o aparelho está sendo consertado
+	 */
+	public String FazerManutencao() {
+		return "Fazendo a manutenção do seguinte produto: Motor Eletrico";
+	}
+	
 	// Construtores da classe MotoEletrico
 
 	/**

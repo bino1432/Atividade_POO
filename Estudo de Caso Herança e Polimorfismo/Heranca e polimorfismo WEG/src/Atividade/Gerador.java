@@ -42,6 +42,30 @@ public class Gerador extends ProdutoWEG {
 		this.autonomia = autonomia;
 	}
 	
+	/**metodo que retorna uma mensagem
+	 * 
+	 * @return retorna uma mensagem que o aparelho está ligando
+	 */
+	public String Ligar() {
+		return "Aparelho Ligando";		
+	}
+	
+	/**metodo que retorna uma mensagem
+	 * 
+	 * @return retorna uma mensagem que o aparelho está Desligando
+	 */
+	public String Desligar() {
+		return "Aparelho Desligando";
+	}
+	
+	/**metodo que rotorna uma mensagem
+	 * 
+	 * @return retorna uma mensagem que o aparelho está sendo consertado
+	 */
+	public String FazerManutencao() {
+		return "Fazendo a manutenção do seguinte produto: Gerador";
+	}
+	
 	// Construtores da Classe Gerador
 	// Construtor vazio
 	/**
