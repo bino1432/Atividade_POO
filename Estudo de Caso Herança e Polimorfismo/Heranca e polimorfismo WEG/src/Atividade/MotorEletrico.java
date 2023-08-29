@@ -11,6 +11,7 @@ public class MotorEletrico extends ProdutoWEG {
 	// Atributos da classe MotorEletrico
 	String tipoDeEnrolamento;
 	float eficiencia;
+	boolean ligado = false;
 	
 	// Getters e Setters da classe MotorEletrico
 	
@@ -47,18 +48,14 @@ public class MotorEletrico extends ProdutoWEG {
 	
 	/**metodo que retorna uma mensagem
 	 * 
-	 * @return retorna uma mensagem que o aparelho está ligando
+	 * @param ligado (boolean)
+	 * @return retorna uma mensagem falando se o aparelho está ligando ou desligando
 	 */
-	public String Ligar() {
-		return "Aparelho Ligando";		
-	}
-	
-	/**metodo que retorna uma mensagem
-	 * 
-	 * @return retorna uma mensagem que o aparelho está Desligando
-	 */
-	public String Desligar() {
-		return "Aparelho Desligando";
+	public String Ligado(boolean ligado) {
+		if (ligado == false) {
+			return "O Motor Elétrico etá ligando";
+		}
+		return "O Motor Elétrico está Desligando";
 	}
 	
 	/**metodo que rotorna uma mensagem

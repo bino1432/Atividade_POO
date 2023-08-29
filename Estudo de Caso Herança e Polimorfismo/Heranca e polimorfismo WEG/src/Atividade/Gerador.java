@@ -10,6 +10,7 @@ public class Gerador extends ProdutoWEG {
 	// Atributos da Classe Geradrlr
 	String tipoDeCombustivel;
 	boolean autonomia;
+	boolean ligado = false;
 	
 	// Getters e Setters da Classe Gerador
 	
@@ -44,18 +45,14 @@ public class Gerador extends ProdutoWEG {
 	
 	/**metodo que retorna uma mensagem
 	 * 
-	 * @return retorna uma mensagem que o aparelho está ligando
+	 * @param ligado (boolean)
+	 * @return retorna uma mensagem falando se o aparelho está ligando ou desligando
 	 */
-	public String Ligar() {
-		return "Aparelho Ligando";		
-	}
-	
-	/**metodo que retorna uma mensagem
-	 * 
-	 * @return retorna uma mensagem que o aparelho está Desligando
-	 */
-	public String Desligar() {
-		return "Aparelho Desligando";
+	public String Ligado(boolean ligado) {
+		if (ligado == false) {
+			return "O Gerador etá ligando";
+		}
+		return "O Gerador está Desligando";
 	}
 	
 	/**metodo que rotorna uma mensagem

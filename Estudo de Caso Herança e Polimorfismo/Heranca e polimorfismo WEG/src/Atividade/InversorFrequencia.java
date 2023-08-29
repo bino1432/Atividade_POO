@@ -9,6 +9,7 @@ public class InversorFrequencia extends ProdutoWEG{
 	// Atributos da Setters inversor de Frequencia
 	int numeroDeFases;
 	int capacidadeDaFrequencia;
+	boolean ligado = false;
 	
 	// Getters e Setters da classe inversor de Frequencia
 	/**
@@ -42,18 +43,14 @@ public class InversorFrequencia extends ProdutoWEG{
 	
 	/**metodo que retorna uma mensagem
 	 * 
-	 * @return retorna uma mensagem que o aparelho está ligando
+	 * @param ligado (boolean)
+	 * @return retorna uma mensagem falando se o aparelho está ligando ou desligando
 	 */
-	public String Ligar() {
-		return "Aparelho Ligando";		
-	}
-	
-	/**metodo que retorna uma mensagem
-	 * 
-	 * @return retorna uma mensagem que o aparelho está Desligando
-	 */
-	public String Desligar() {
-		return "Aparelho Desligando";
+	public String Ligado(boolean ligado) {
+		if (ligado == false) {
+			return "O Inversor de Frequencia etá ligando";
+		}
+		return "O Inversor de Frequencia está Desligando";
 	}
 	
 	/**metodo que rotorna uma mensagem
