@@ -7,8 +7,8 @@ package Atividade;
 public class WEG {
 	
 	// Atributos da classe WEG
-	String[] listaProdutos = new String[100];
-	String[] listaManutencao = new String[100];
+	String[] listaProdutos = {"Gerador", "Inversor de Frequencia", "Motor Eletríco"}; 
+	String[] listaManutencao = {"Limpeza", "Apertar Parafusos", "Passar Óleo"};
 	
 	// Getters e Setters da classe WEG
 	/**
@@ -39,6 +39,26 @@ public class WEG {
 	public void setListaManutencao(String[] listaManutencao) {
 		this.listaManutencao = listaManutencao;
 	}
+	
+	/** Metodo da Classe WEG
+	 * 
+	 * @return Retorna um texto explicando a lista de produtos da WEG e uma breve descrição do produto
+	 */
+	public String ListarProdutos() {
+		return "Geradores: Um gerador é um dispositivo ou sistema que converte uma forma de energia, como energia mecânica, térmica ou química, em energia elétrica"
+			  +"Inversores de Frequencia: Ele funciona alterando a frequência da energia elétrica fornecida ao motor"
+			  +"Motor Eletrico: Um motor elétrico é um dispositivo que converte energia elétrica em energia mecânica, produzindo movimento. ";
+ 	}
+	
+	/** Metodo da Classe WEG
+	 * 
+	 * @return Retorna um texto explicando a lista de Serviços de Manutencão fornecidos pela WEG e uma breve descrição do Serviço
+	 */
+	public String ListarServicosManutencao() {
+		return "Limpeza: Adequado para você que apenas quer limpar seu dispositivo ou produto"
+			  +"Apertar Parafusos: Adequado para você que está com o Produto com seus parafusos soltos"
+			  +"Passr Óleo: Adequado para você que quer passar Óleo no seu produto";
+ 	}
 	
 	// Construtor da classe WEG
 	/**

@@ -1,6 +1,6 @@
 package Atividade;
 /**
- * classe do Motor Eletrico
+ * classe que se refere ao motor eletrico da WEG
  * filha da classe ProditoWEG
  *  
  * @author Bernardo P Zapelini
@@ -16,7 +16,7 @@ public class MotorEletrico extends ProdutoWEG {
 	
 	/**
 	 * metodo para retornar o tipo de enrolamento
-	 * @return String
+	 * @return retorna qual o tipo de enrolamento do motor
 	 */
 	public String getTipoDeEnrolamento() {
 		return tipoDeEnrolamento;
@@ -32,7 +32,7 @@ public class MotorEletrico extends ProdutoWEG {
 	
 	/**
 	 * metodo para retornar a eficiencia
-	 * @return float
+	 * @return retorna a aeficiencia do motor
 	 */
 	public float getEficiencia() {
 		return eficiencia;

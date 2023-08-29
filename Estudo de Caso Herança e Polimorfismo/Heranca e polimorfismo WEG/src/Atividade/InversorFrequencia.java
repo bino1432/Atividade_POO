@@ -1,6 +1,6 @@
 package Atividade;
 /**
- * classe do Inversor de Frequencia
+ * classe que se refere ao Inversor de Frequencia da WEG
  * filha da classe ProdutoWEG
  * @author Bernardo P Zapelini
  *
@@ -13,7 +13,7 @@ public class InversorFrequencia extends ProdutoWEG{
 	// Getters e Setters da classe inversor de Frequencia
 	/**
 	 * metodo para retornar o numero de fases do produto
-	 * @return (int)
+	 * @return retorna a quantidade de numero de fases que o inversor tem
 	 */
 	public int getNumeroDeFases() {
 		return numeroDeFases;
@@ -27,7 +27,7 @@ public class InversorFrequencia extends ProdutoWEG{
 	}
 	/**
 	 * metodo para retornar a capacidade da frequencia
-	 * @return (int)
+	 * @return retorna a capacidade da frequencia do inversor
 	 */
 	public int getCapacidadeDaFrequencia() {
 		return capacidadeDaFrequencia;

@@ -1,6 +1,6 @@
 package Atividade;
 /**
- * classe ProdutoWEG
+ * classe Pai Produtos WEG que se refere ao basico de todos os produtos da WEG
  * @author Bernardo P Zapelini
  *
  */
@@ -17,7 +17,7 @@ public class ProdutoWEG {
 	
 	/**
 	 * metodo para retornar o codigo do produto
-	 * @return (int)
+	 * @return Retorna o Codigo do Produto da WEG
 	 */
 	public int getCodigo() {
 		return codigo;
@@ -31,7 +31,7 @@ public class ProdutoWEG {
 	}
 	/**
 	 * metodo para retornar o tipo do produto
-	 * @return (String)
+	 * @return Retorna o tip do Produto da WEG
 	 */
 	public String getTipo() {
 		return tipo;
@@ -45,7 +45,7 @@ public class ProdutoWEG {
 	}
 	/**
 	 * metodo para retornar a potencia do produto
-	 * @return (float)
+	 * @return Retorna a Potencia do Produto da WEG
 	 */
 	public float getPotencia() {
 		return potencia;
@@ -59,7 +59,7 @@ public class ProdutoWEG {
 	}
 	/**
 	 * metodo para retornar a tensao do produto
-	 * @return (float)
+	 * @return Retorna a tensao do Produto da WEG
 	 */
 	public float getTensao() {
 		return tensao;
@@ -73,7 +73,7 @@ public class ProdutoWEG {
 	}
 	/**
 	 * metodo para retornar o peso do produto
-	 * @return float
+	 * @return retorna o peso do Produto da WEG
 	 */
 	public float getPeso() {
 		return peso;

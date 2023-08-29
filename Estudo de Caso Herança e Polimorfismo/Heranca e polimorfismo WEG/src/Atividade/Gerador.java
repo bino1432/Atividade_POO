@@ -1,6 +1,6 @@
 package Atividade;
 /**
- * classe do Gerrador
+ * Classe que se revere a Geradores da WEG
  * filha da classe ProdutoWEG
  * @author Bernardo P Zapelini
  *
@@ -15,7 +15,7 @@ public class Gerador extends ProdutoWEG {
 	
 	/**
 	 * metodo que retorna o tipo de combustivel
-	 * @return (String)
+	 * @return Retorna qual o tipo de combustivel que o gerador usa
 	 */
 	public String getTipoDeCombustivel() {
 		return tipoDeCombustivel;
@@ -29,7 +29,7 @@ public class Gerador extends ProdutoWEG {
 	}
 	/** 
 	 * metodo que retorna a autonomia do produto
-	 * @return (boolean)
+	 * @return Retorna se o gerador tem autonomia ou não
 	 */
 	public boolean isAutonomia() {
 		return autonomia;

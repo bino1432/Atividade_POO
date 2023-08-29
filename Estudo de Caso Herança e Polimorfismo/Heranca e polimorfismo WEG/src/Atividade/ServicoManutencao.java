@@ -40,6 +40,30 @@ public class ServicoManutencao {
 		this.custo = custo;
 	}
 	
+	/**
+	 *
+	 * @return String
+	 */
+	public String Limpeza() {
+		return "Limpesa de Sujeira 10 Reias";
+	}
+	
+	/**
+	 * 
+	 * @return String
+	 */
+	public String Parafusos() {
+		return "Apertar Parafusos 50 Reais";
+	}
+	
+	/**
+	 * 
+	 * @return String
+	 */
+	public String Oleo() {
+		return "Adicionar Óleo 70 Reais";
+	}
+	
 	// Costrutores da classe ServicoManutencao
 	/**
 	 * costrutor vazio da classe ServicoManutencao
